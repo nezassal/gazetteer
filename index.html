@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gazetter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">
+    -->
+    <script src="/src/ol/dist/ol.js"></script>
+    <link rel="stylesheet" href="/src/ol/ol.css">
+    
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    
+    <style type="text/css">
+
+       .map {
+          height: 400px;
+          width: 100%;
+      }
+        
+    </style>
+    
+  </head>
+  <body>
+       <div data-role="page">
+      
+      	<div data-role="header">
+      		<h1>Gazetter 1</h1>
+      	</div><!-- /header -->
+      
+      	<div role="main" class="ui-content">
+      		<p>Page content goes here.</p>
+          <!-- <div id="mapPlaceholder" class="map"></div> -->
+          <div id="map"  class="map"></div>
+          <p>
+            position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
+            altitude : <code id="altitude"></code>&nbsp;&nbsp;
+            altitude accuracy : <code id="altitudeAccuracy"></code>&nbsp;&nbsp;
+            heading : <code id="heading"></code>&nbsp;&nbsp;
+            speed : <code id="speed"></code>
+          </p>
+      	
+        <input type="file" id="csvfile" />  
+        <input type="button" id="loadFileIntoDB" value="load csv into db" onclick="fn_load_csv_into_db()" />
+        
+        
+        </div><!-- /content -->
+
+
+         
+      	<div data-role="footer">
+      		<h4>Page Footer</h4>
+      	</div><!-- /footer -->
+      </div><!-- /page -->
+    
+    <script type="module" src="main.js"></script>
+    
+    
+  </body>
+</html>
